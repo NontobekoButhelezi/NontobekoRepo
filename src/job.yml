@@ -2,14 +2,15 @@ $schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
 code: model
 command: >-
   python 
-  --
-  --
+  train.py
+  
 inputs:
   training_data: 
-    type: uri_folder 
-    path: 
+    type: azureml:datastore 
+    path: diabetes-dev-folder
   reg_rate: 0.01
 environment: azureml:AzureML-sklearn-0.24-ubuntu18.04-py37-cpu@latest
 compute: 
-experiment_name: 
-description: 
+  instance_type: Standard_D2_v2
+experiment_name: 'NontobekoChallenge'
+description: 'Create an Azure Machine Learning job'
