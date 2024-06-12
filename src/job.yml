@@ -14,3 +14,6 @@ compute:
   instance_type: Standard_D2_v2
 experiment_name: 'NontobekoChallenge'
 description: 'Create an Azure Machine Learning job'
+
+az ml job create --file job.yml
+
